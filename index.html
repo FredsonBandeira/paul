@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar de Futsal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('fundo.jpg')">
+    <div class="team-selection">
+        <h2>Selecionar Equipes</h2>
+        <form>
+            <label for="team1">Casa:</label>
+            <input type="text" name="input" id="1team"  placeholder="1º Nome">
+            <input type="text" id="team1" placeholder="Nome da Equipe" title="Apenas letras, números e espaços são permitidos" required pattern="[A-Za-z0-9\s]+">
+            <input type="file" id="team1-badge" accept="image/*">
+            
+            <label for="team2">Visitante:</label>
+            <input type="text" name="input" id="2team"  placeholder="1º Nome">
+            <input type="text" id="team2" placeholder="2º Nome" title="Apenas letras, números e espaços são permitidos" required pattern="[A-Za-z0-9\s]+">
+            <input type="file" id="team2-badge" accept="image/*">
+            
+            <button type="button" onclick="startGame()">Iniciar Jogo</button>
+        </form>
+    </div>
+    <div class="scoreboard" >
+        <div class="team">
+            <img
+            src="estrelareal.jpg"
+            alt="Emblema Equipe A"
+            class="emblem-large"
+            id="teamAEmblem"
+             data-team="A"
+          /><!-- Adicona golo quando clica no emblema da equipa-->
+          <h2 id="teamAName">E. REAL</h2>
+          <p class="score" id="teamAScoreDisplay">0</p>
+            <p class="fouls" id="teamAFouls">FALTAS: <span id="teamAFoulCount">0</span></p>
+            <!-- <p class="goal-text" id="teamAGoalText">Golooo</p> -->
+            <button id="addTeamAGoal">G</button>
+            <button id="addTeamAFoul">+</button><!-- Adicona faltas -->
+            <button id="removeTeamAFoul">-</button><!-- remova faltas -->
+            <button id="addTeamARedCard" class="red-card-button" >V</button> <!--  botão para adicionar um cartão vermelho a Equipe A -->
+            
+        </div>
+        
+        <div class="time">
+            <div class="red-cards">
+               
+                <div class="cart-circle  cart-circle-A" data-team="A" data-index="1"></div>
+                <div class="cup-logo">
+                    <img src="cop.png" alt="Logotipo da Copa">
+                </div>
+                <div class="cart-circle cart-circle-B" data-team="B" data-index="1"></div>                
+            </div>
+                <p id="partToggle"> 1º PARTE</p>
+                <!-- <p>TEMPO RESTANTE:</p> -->
+                <span id="timer" class="timer-huge">20:00</span>
+           
+
+        </div>
+        <div class="team">
+            <img
+            src="eito.jpg"
+            alt="Emblema Equipe A"
+            class="emblem-large"
+            id="teamBEmblem"
+            data-team="B"
+          /><!-- Adicona golo quando clica no emblema da equipa-->
+          <h2 id="teamBName">EITO</h2>
+          <p class="score" id="teamBScoreDisplay">0</p><!-- Remova golo quando clica no numero de golos-->
+            <p class="fouls" id="teamBFouls">FALTAS: <span id="teamBFoulCount">0</span></p>
+            <button id="addTeamBGoal">G</button>
+            <button id="addTeamBFoul">+</button><!-- Adicona faltas -->
+            <button id="removeTeamBFoul">-</button><!-- Remove faltas -->
+            <button id="addTeamBRedCard" class="red-card-button">V</button><!--  botão para adicionar um cartão vermelho a Equipe B -->
+        </div>
+        <div id="goalNotifications" class="goal-notifications">
+            <!-- Aqui serão exibidas as notificações de gol -->
+        </div>
+        
+    </div>
+    <div id="goalNotifications" class="goal-notifications">
+        <!-- Aqui serão exibidas as notificações de gol -->
+    </div>
+    <div class="controls">
+        <button id="startPause" class="control-button">INICIAR</button>
+        <button id="reset" class="control-button">REINICIAR</button>
+        <button id="startkillerTime" class="control-button" onclick="startTimeout()">TEMPO MORTO</button>
+        <button id="startExtraTime" class="control-button" onclick="startExtraTime()">PROLONGAMENTO</button>
+        <button id="resetGame" class="control-button">NOVO JOGO</button>
+    </div>
+
+<!-- Janela modal para a equipe A -->
+<div id="goalModalA" class="modalE" style="display: none;">
+    <div class="modal-contentE">
+        <div class="modal-inner-content">
+            <span id="teamAEmblemModal" class="team-emblem-modal"></span>
+            <p id="goalMessageA" class="goal-message"></p>
+        </div>
+    </div>
+</div>
+
+<!-- Janela modal para a equipe B -->
+<div id="goalModalB" class="modalE" style="display: none;">
+    <div class="modal-contentE">
+        <div class="modal-inner-content">
+            <span id="teamBEmblemModal" class="team-emblem-modal"></span>
+            <p id="goalMessageB" class="goal-message"></p>
+        </div>
+    </div>
+</div>
+
+  
+<!-- Janela modal para o tempo morto -->
+<div id="timeoutModal" class="modalE"  style="display: none;">
+    <div class="modal-contentE">
+        <h1>TEMPO MORTO</h1>
+        <div id="timeoutTimer" class="timer">01:00</div>
+        <button onclick="closeTimeoutModal()">Fechar</button>
+    </div>
+</div>
+     
+
+
+    
+
+    
+      
+    <script src="script.js"></script>
+</body>
+</html>

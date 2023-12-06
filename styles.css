@@ -1,0 +1,318 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.team-selection {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .team-selection h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .team-selection form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .team-selection label {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .team-selection input[type="text"] {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .team-selection input[type="file"] {
+    margin: 5px 0;
+  }
+  
+  .team-selection button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .team-selection button:hover {
+    background-color: #0056b3;
+  }
+  
+.scoreboard {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 3px;
+    margin-left: auto;
+    max-width: 1200px;
+    height: 650px;
+}
+/* Estilização dos cartões vermelhos */
+.red-cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 5px;
+    /* margin-bottom: 120px; */
+}
+
+.team{
+    align-items: center;
+}
+.cart-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilize a imagem do logotipo da copa */
+
+.cup-logo {
+  position: relative;
+  width: 300px; /* Ajuste o tamanho conforme necessário */
+  height: 300px; /* Ajuste o tamanho conforme necessário */
+  text-align: center;
+  margin-top: -100px; /* Ajuste a posição vertical conforme necessário */
+  right: 40px;
+}
+
+.cup-logo img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.cup-name {         
+  font-size: 45px; /* Ajuste o tamanho do texto conforme necessário */
+  font-weight: bold;
+  color: #0939bf;
+  position: relative;
+  top: -30px; /* Ajuste a posição vertical conforme necessário */
+  margin-bottom: 0px;
+}
+
+.cart-circle.red-card {
+    background-color: red;
+}
+.cart-circle-A{
+    margin-right: 120px;
+    /* display: none; */
+}
+.cart-circle-B{
+    margin-left: 20px;
+    /* display: none; */
+}
+.time p{
+    font-size: 2.9em; 
+    font-weight: bold;
+    margin-top: 0px;
+ }
+.team, .time {
+    flex: 1;
+    text-align: center;
+}
+a{
+  text-decoration: none;
+}
+
+.fouls {
+    color: red;
+    font-size: 3em; /* Aumenta o tamanho do texto das faltas */
+    font-weight: bold;
+}
+
+.team h2 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+.team .score {
+    font-size: 6em; /* Aumenta o tamanho do texto dos golos */
+    font-weight: bold;
+    margin: 5px;
+}
+
+.controls {
+    margin-top: 10px;
+    display: none;
+}
+P{
+    margin-bottom: 5px;
+}
+.control-button {
+    font-size: 1.5em; /* Aumenta o tamanho dos botões de controle */
+    padding: 15px 30px; /* Aumenta o espaço ao redor do texto nos botões de controle */
+    margin: 10px;
+    cursor: pointer;
+    background-color: #007bff; /* Cor de fundo azul */
+    color: #fff; /* Cor do texto branco */
+    border: none;
+    border-radius: 5px;
+}
+
+.control-button:hover {
+    background-color: #0056b3; /* Cor de fundo azul mais escura quando hover */
+}
+
+.timer-huge {
+    font-size: 8em; /* Aumenta o tamanho do tempo de jogo */
+    font-weight: bold;
+    color: #007bff;
+}
+
+.emblem-large {
+    width: 250px; /* Ajuste o tamanho dos emblemas conforme necessário */
+    height: 250px;
+    border-radius: 8em;
+}
+
+.score-button {
+    font-size: 1.5em; /* Aumenta o tamanho dos botões de pontuação */
+    padding: 15px 30px; /* Aumenta o espaço ao redor do texto nos botões de pontuação */
+    margin: 10px;
+    cursor: pointer;
+    background-color: #28a745; /* Cor de fundo verde */
+    color: #fff; /* Cor do texto branco */
+    border: none;
+    border-radius: 5px;
+}
+
+.score-button:hover {
+    background-color: #1e7e34; /* Cor de fundo verde mais escura quando hover */
+}
+/* Estilos para a janela modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilos para a janela modal */
+  .modal {
+      display: none;
+      position: fixed;
+      /* margin: 80px; */
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .modal-content {
+      background-color: #fff;
+      padding: 0px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      position: relative;
+    }
+    
+    /* Estilos para o botão de fechar */
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    
+    /* Estilos para o cronômetro dentro da modal */
+   
+   .modal-contentE h1 {
+      font-size: 5em;
+      margin-bottom: 20px;
+      margin-top: 90px;
+    }
+    
+    /* Estilos para o cronômetro dentro da modal */
+    .timer {
+      font-size: 12em;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #007bff;
+    }
+    
+    /* margin: auto 80px;
+    width: 200px;
+    height: 475px; */
+    .modalE {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+  }
+  
+  .modal-contentE {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+  }
+  
+  .modal-inner-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
+  
+  .team-emblem {
+      width: 200px;
+      height: 475px;
+      margin-right: 30px; /* Espaço entre a imagem e a mensagem */
+  }
+  
+  .goal-message {
+      color: green;
+      font-size: 10em;
+      font-weight: bold;
+      margin-top: 10px; /* Espaço entre a imagem e a mensagem */
+  }
+  
+   
